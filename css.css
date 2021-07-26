@@ -1,0 +1,162 @@
+body{padding: 0;overflow: hidden;}
+.sky{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#3e5879, #9ba5ae, #dcb697, #fc7001, #dd723c, #ad4a28,#3e5879,#020b1a,#040308);
+  background-size: 1600% 1600%;
+  animation: coloring 180s infinite linear;
+  animation-direction: alternate;
+  z-index: 1
+}
+.ground{
+  background: rgb(82,209,101);
+  background: linear-gradient(180deg, rgba(82,209,101,1) 0%, rgba(18,171,41,1) 100%);
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  top: 85%;
+  left:0;
+  box-shadow: 0 -5px 8px green inset;
+  z-index: 3;
+}
+.sun{
+  width: 80px;
+  height: 80px;
+  background: rgb(255,255,117);
+  background: radial-gradient(circle, rgba(255,255,117,1) 0%, rgba(255,231,0,1) 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  box-shadow: 0 0 25px yellow;
+  animation: sunset 180s infinite linear;
+  z-index: 2;
+}
+.cloud1{
+  width: 15%;
+  height: 15%;
+  background: rgb(239,239,239);
+  background: linear-gradient(0deg, rgba(239,239,239,1) 19%, rgba(250,250,250,1) 20%, rgba(225,225,225,1) 76%, rgba(229,229,229,1) 77%, rgba(240,240,240,1) 100%);
+  position: absolute;
+  border-radius: 40%;
+  top:25%;
+  left:-25%;
+  z-index: 4;
+  box-shadow: 0 0 8px #CCC;
+  opacity: 75%;
+  animation: moving 15s infinite cubic-bezier(.63,.43,.82,.6);
+}
+.cloud2{
+  width: 15%;
+  height: 15%;
+  background: rgb(239,239,239);
+  background: linear-gradient(0deg, rgba(239,239,239,1) 19%, rgba(250,250,250,1) 20%, rgba(225,225,225,1) 76%, rgba(229,229,229,1) 77%, rgba(240,240,240,1) 100%);
+  position: absolute;
+  border-radius: 40%;
+  top:18%;
+  left:-25%;
+  box-shadow: 0 0 8px #CCC;
+  opacity: 75%;
+  z-index: 5;
+  animation: moving 17s infinite 3s cubic-bezier(.63,.43,.82,.6);
+}
+.cloud3{
+  width: 15%;
+  height: 15%;
+  background: rgb(239,239,239);
+  background: linear-gradient(0deg, rgba(239,239,239,1) 19%, rgba(250,250,250,1) 20%, rgba(225,225,225,1) 76%, rgba(229,229,229,1) 77%, rgba(240,240,240,1) 100%);
+  position: absolute;
+  border-radius: 40%;
+  top:15%;
+  left:-25%;
+  box-shadow: 0 0 8px #CCC;
+  opacity: 75%;
+  z-index: 6;
+  animation: moving 20s infinite 5s cubic-bezier(.63,.43,.82,.6);
+}
+@keyframes moving {
+  from{
+    left:-25%;
+  }
+  to{
+    left:120%;
+  }
+
+}
+@keyframes sunset {
+  0%,100%{
+    top: 50px;
+    left: 50px;
+  }
+  10%{
+    top:25%;
+    left:20%;
+  }
+  20%{
+    top:50%;
+    left:30%;
+  }
+  30%{
+    top:75%;
+    left:40%;
+  }
+  40%{
+    top:100%;
+    left:50%;
+  }
+  50%{
+    top:125%;
+    left:50px;
+  }
+  60%{
+    top:120%;
+    left:-20%;
+  }
+  70%{
+    top:100%;
+    left:-30%;
+  }
+  80%{
+    top:50%;
+    left:-50%;
+  }
+  90%{
+    top: 25%;
+    left:-25%;
+  }
+}
+@keyframes coloring {
+  0%,100%{
+    background-position: 9% 0%
+  }
+  10%{
+      background-position: 19% 10%
+  }
+  20%{
+      background-position: 29% 20%
+  }
+  30%{
+      background-position: 39% 30%
+  }
+  40%{
+      background-position: 49% 40%
+  }
+  50%{
+      background-position: 59% 50%
+  }
+  60%{
+    background-position: 69% 60%
+  }
+  70%{
+      background-position: 79% 70%
+  }
+  80%{
+      background-position: 89% 80%
+  }
+  90%{
+      background-position: 99% 90%
+  }
+}
